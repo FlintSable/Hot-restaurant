@@ -57,25 +57,25 @@ app.get("/viewTables", function(req, res) {
   res.sendFile(path.join(__dirname, "viewTables.html"));
 });
 
-// // Search for Specific Character (or all characters) - provides JSON
-// app.get("/api/:characters?", function(req, res) {
-//   var chosen = req.params.characters;
+// Search for Specific Character (or all characters) - provides JSON
+app.get("/api/viewTables", function(req, res) {
+  // var chosen = req.params.tables;
 
-//   if (chosen) {
-//     console.log(chosen);
+  // if (chosen) {
+  //   console.log(chosen);
 
-//     for (var i = 0; i < characters.length; i++) {
-//       if (chosen === characters[i].routeName) {
-//         res.json(characters[i]);
-//         return;
-//       }
-//     }
+  //   for (var i = 0; i < characters.length; i++) {
+  //     if (chosen === characters[i].routeName) {
+  //       res.json(characters[i]);
+  //       return;
+  //     }
+  //   }
 
-//     res.json(false);
-//   }
-//   else {
-//     res.json(characters);
-//   }
+  //   res.json(false);
+  // }
+  // else {
+    res.json(tables);
+  });
 // });
 
 // Create New Reservation - takes in JSON input
