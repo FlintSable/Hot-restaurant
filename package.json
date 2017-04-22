@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/FlintSable/Hot-restaurant/issues"
   },
-  "homepage": "https://github.com/FlintSable/Hot-restaurant#readme"
+  "homepage": "https://github.com/FlintSable/Hot-restaurant#readme",
+  "dependencies": {
+    "express": "^4.15.2",
+    "path": "^0.12.7"
+  }
 }

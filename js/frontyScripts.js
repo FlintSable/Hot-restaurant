@@ -1,4 +1,4 @@
-<script type="text/javascript">
+
 
 	// In this code below we create the Front-end Javascript which "POSTS" our form data to our express server.
 	// In essence, when the user hits submit, jQuery grabs all of the fields then sends a post request to our api
@@ -51,4 +51,3 @@ return false;
 
 });
 
-</script>
