@@ -16,14 +16,19 @@ app.use(bodyParser.text());
 app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
 
-var tables = [];
 
-// [{
-//   reservationName: "yoda",
-//   phoneNumber: "Yoda",
-//   customerEmail: "Jedi Master",
-//   customerID: 900
-// }, {
+var tables = [{
+  reservationName: "yoda",
+  phoneNumber: 5555555,
+  customerEmail: "yoda@yoda.com",
+  customerID: "force master"
+}, 
+  reservationName: "marty mcfly",
+  phoneNumber: 7373737,
+  customerEmail: "marty@backtothefuture.com",
+  customerID: "michaeljfox"
+ }
+ ];
 
 // Create the front-end (visuals) for home page, reservation form, and reservation views.
 
@@ -73,17 +78,17 @@ app.get("/viewTables", function(req, res) {
 //   }
 // });
 
-// // Create New Characters - takes in JSON input
-// app.post("/api/new", function(req, res) {
-//   var newcharacter = req.body;
-//   newcharacter.routeName = newcharacter.name.replace(/\s+/g, "").toLowerCase();
+// Create New Characters - takes in JSON input
+app.post("/api/new", function(req, res) {
+  var newreservation = req.body;
+  newreservation.routeName = newreservation.name.replace(/\s+/g, "").toLowerCase();
 
-//   console.log(newcharacter);
+  console.log(newreservation);
 
-//   characters.push(newcharacter);
+  tables.push(newreservation);
 
-//   res.json(newcharacter);
-// });
+  res.json(newreservation);
+});
 
 // Starts the server to begin listening
 // =============================================================
