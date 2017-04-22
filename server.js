@@ -16,17 +16,41 @@ app.use(bodyParser.text());
 app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
 
-// // Routes
-// // =============================================================
+var tables = [];
 
-// // Basic route that sends the user first to the AJAX Page
-// app.get("/", function(req, res) {
-//   res.sendFile(path.join(__dirname, "view.html"));
-// });
+// [{
+//   reservationName: "yoda",
+//   phoneNumber: "Yoda",
+//   customerEmail: "Jedi Master",
+//   customerID: 900
+// }, {
 
-// app.get("/add", function(req, res) {
-//   res.sendFile(path.join(__dirname, "add.html"));
-// });
+// Create the front-end (visuals) for home page, reservation form, and reservation views.
+
+// Create a basic server using Express.JS
+
+// Create a few array variables that will hold the data
+
+// Create a set of routes for getting and posting table data
+
+// Create a set of routes for displaying the HTML pages
+
+// Use jQuery to run AJAX calls to GET and POST data from users to the Express server
+// Routes
+// =============================================================
+
+// Basic route that sends the user first to the AJAX Page
+app.get("/", function(req, res) {
+  res.sendFile(path.join(__dirname, "index.html"));
+});
+
+app.get("/makeRes", function(req, res) {
+  res.sendFile(path.join(__dirname, "makeRes.html"));
+});
+
+app.get("/viewTables", function(req, res) {
+  res.sendFile(path.join(__dirname, "viewTables.html"));
+});
 
 // // Search for Specific Character (or all characters) - provides JSON
 // app.get("/api/:characters?", function(req, res) {
@@ -61,8 +85,8 @@ app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 //   res.json(newcharacter);
 // });
 
-// // Starts the server to begin listening
-// // =============================================================
-// app.listen(PORT, function() {
-//   console.log("App listening on PORT " + PORT);
-// });
+// Starts the server to begin listening
+// =============================================================
+app.listen(PORT, function() {
+  console.log("App listening on PORT " + PORT);
+});
