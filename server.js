@@ -22,7 +22,7 @@ var tables = [{
   phoneNumber: 5555555,
   customerEmail: "yoda@yoda.com",
   customerID: "force master"
-}, 
+}, {
   reservationName: "marty mcfly",
   phoneNumber: 7373737,
   customerEmail: "marty@backtothefuture.com",
